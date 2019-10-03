@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+{% block content %}
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+  <!-- BEGIN Pre-requisites -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+  </script>
+  <!-- END Pre-requisites -->
+  <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '354510012673-gpbet7avjii5nt0rp0p4ec210tgo2ple.apps.googleusercontent.com',
+
+        });
+      });
+    }
+  </script>
+</head>
+<body>
+
+
+
+  
+  <apan>Log in Using your google account</span><br>
+  <div id = google-sign-in>
+  <a id="signinButton"><img id = "sign-in-img" src="static/google.jpg" alt="Google sign in" height = "67" width ="230"></a></span>
+   <a href = "{{url_for('showItems')}}">Cancel</a>
+  </div>
+ 
+  
+  
+  <div id ="result"></div>
+
+  <script>
+  $('#signinButton').click(function() {
+    function signInCallback(authResult){
+      if (authResult['code']){
+        $('#signinButton').attr('style', 'display: none');
+        $.ajax({
+          type: 'POST',
+          url: '/gconnect?state={{STATE}}',
+          headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+          },
+          contentType: 'application/octet-stream; charset=utf-8',
+          success:function(result){
+            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+                 setTimeout(function() {
+                  window.location.href = "/";
+                 }, 2000);
+          },
+          processData:false,
+          data:authResult['code']
+        });
+      } else{
+        // handle error
+        console.log('There was an error: ' + authResult['error']);
+        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+      }
+    }
+    auth2.grantOfflineAccess().then(signInCallback);
+  });
+</script>
+</body>
+</html>
+{% endblock %}

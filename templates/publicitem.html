@@ -1,0 +1,18 @@
+
+<body>
+
+	<a href = "{{url_for('showItems')}}">Home</a>
+	
+	<h2>{{category.name}}</h2>
+
+
+	{% for item in items %}
+    <div><span><p>{{item.name}}</p></span></div>
+
+	<div><p>{{item.description}}</p></div>
+
+	{% endfor %}
+
+</body>
+
+

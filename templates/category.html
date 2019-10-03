@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+<body>
+
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+				{% for message in messages %}
+		  			<li><strong>{{message}}</strong></li>
+		  		{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+
+		<div id ="logout">
+			<a  href = "{{url_for('gdisconnect')}}">Sign out</a>
+		</div>
+
+		<img id = "home-photo" src="static/photo4.jpg" alt="App Photo">
+		<div>
+
+		<h1>All Categories</h1>
+		<button id = "new-cat">
+		<a href = "{{url_for('newCategory', category_id=category_id)}}">Add New Category</a>
+		<br>
+		</button>
+
+		{% for category in categories %}
+		<div id = "container">
+		<a id = "items" href = "{{url_for('showItems', category_id=category.id)}}">
+
+		<h2>{{category.name}}</h2></a>
+		
+		<a id = "items" href = "{{url_for('editCategory', category_id=category.id)}}">Edit</a><br>
+
+		<a id = "items" href = "{{url_for('deleteCategory', category_id=category.id)}}">Delete</a><br>
+		</div>
+		</div>
+	{% endfor %}
+</body>
+{% endblock %}

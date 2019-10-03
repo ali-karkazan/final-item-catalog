@@ -1,0 +1,152 @@
+html {
+	background-color: lightyellow;
+}
+
+#sign-in {
+	color: black;
+  	padding: 14px 25px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	background-color: #ffff66;
+  	display: flex;
+  	float: right;
+  	margin-right: 10%;
+  	font-weight : bold;
+  	font-style: italic;
+  
+}
+
+#sign-in:hover {
+  	background-color: #ffff00;
+}
+
+#logout{
+	text-decoration: none;
+	color: black;
+  	padding: 14px 25px;
+  	text-align: center;
+  	
+  	display: inline-block;
+  	background-color: #ffff66;
+  	display: flex;
+  	float: right;
+  	margin-right: 10%;
+  	font-weight : bold;
+  	font-style: italic;
+}
+
+#sign-in:hover {
+  	background-color: #ffff00;
+}
+
+
+h1 {
+	padding: 1%;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	border-style: solid;
+	border-color: black;
+	text-align: center;
+	background-color: #3fc93c;
+	font-style: italic;
+
+
+
+}
+
+#container {
+	text-align: center;
+	margin-top: 1%;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 1px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 5px;
+	background-color: #3366ff;
+ 	
+}
+
+#container:hover {
+	background-color:#3333ff ;
+}
+
+ #items {
+ 	color: white;
+ 	text-decoration: none;
+ 	border:5px;
+ 	border-color: black;
+ }
+
+
+h2 {
+	color:white; 	
+}
+
+#home-photo {
+	
+	height:350px;
+	width: 450px;
+	margin-left: 35%;
+}
+
+#new-cat {
+  background-color: #3fc93c; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+  margin-left: 42%;
+}
+
+#new-cat:hover{
+	background-color: #4CAF50;
+}
+
+#new-item {
+  background-color: #3fc93c; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: none;
+  margin-left: 42%;
+}
+
+#new-itemt:hover{
+	background-color: #4CAF50;
+}
+
+a {
+	text-decoration: none;
+}
+
+#sign-in-img {
+	display: flex;
+}
+
+h3 {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+#item-details {
+	border-style: solid;
+	border-color: black;
+	padding:3px;
+}
+

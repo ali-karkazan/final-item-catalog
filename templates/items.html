@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+{% block content %}
+
+<body>
+
+	<a href = "{{url_for('showItems')}}">Go back to home page</a>
+
+
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+
+		<ul>
+		{% for message in messages %}
+		  <li><strong>{{message}}</strong></li>
+		  {% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+	
+	<h1>{{category.name}}</h1>
+
+	<button id = "new-item">
+	<a href = "{{url_for('newItem', category_id=category.id)}}">Add new Item</a></button>
+		<br>
+		<br>
+
+	{% for item in items %}
+    <div><h3>{{item.name}}</h3></div>
+
+	<div><p id = "item-details">{{item.description}}</p></div>
+	
+	<div>
+
+		<a href = "{{url_for('editItem', category_id=category.id, item_id=item.id)}}" >Edit </a>
+		<br>
+
+		<a href = "{{url_for('deleteItem', category_id=category.id, item_id=item.id)}}" >Delete</a>
+		<br>
+
+	</div>
+	{% endfor %}
+</body>
+
+{% endblock %}
+
