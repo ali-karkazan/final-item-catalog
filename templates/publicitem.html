@@ -1,18 +1,18 @@
-
+{% extends "main.html" %}
+{% block content %}
 <body>
 
-	<a href = "{{url_for('showItems')}}">Home</a>
+	<a href = "{{url_for('showItems')}}">Go back to home page</a>
 	
 	<h2>{{category.name}}</h2>
 
 
 	{% for item in items %}
-    <div><span><p>{{item.name}}</p></span></div>
+    <div><h3>{{item.name}}</h3></div>
 
-	<div><p>{{item.description}}</p></div>
+	<div><p id = "item-details">{{item.description}}</p></div>
 
 	{% endfor %}
 
 </body>
-
-
+{% endblock %}

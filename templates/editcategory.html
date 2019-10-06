@@ -1,3 +1,5 @@
+{% extends "main.html" %}
+{% block content %}
 <html>
 
 <head>
@@ -14,8 +16,9 @@
 
 	<input type='submit' value='Edit'>
 
-	<button href = "{{url_for('allCategories', category_id = category_id)}}"> Cancel</button>
+	<button href = "{{url_for('allCategories')}}"> Cancel</button>
 	</form>
 
 </body>
 </html>
+{% endblock %}
