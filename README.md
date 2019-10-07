@@ -30,7 +30,7 @@ You will learn how to develop a RESTful web application using the Python framewo
 	8- Access the application [locally](http://localhost:5000)
 
 
-#JSON Endpoints
+# JSON Endpoints
 you can access the json data of the project through :
 
 	1- to show all catagories JSON file "/category/JSON"
