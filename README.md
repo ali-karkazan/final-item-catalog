@@ -16,16 +16,23 @@ You will learn how to develop a RESTful web application using the Python framewo
 
 # Requirement
   * [Python3](https://www.python.org/)
-  * [Vagrant](https://www.vagrantup.com/)
+  * [Udacity Vagrant](https://github.com/udacity/fullstack-nanodegree-vm)
   * [VirtualBox](https://www.virtualbox.org/)
 
-# Quickstart
+# How to install 
+1- install Vagrant & VirtualBox
+2- Clone The Udacity Vagrantfile
+3- Go to vagrant directry and clone this repo
+4- Launch the VM using ('vagrant up')
+5- log in using ('vagant ssh')
+6- Access the application folder via ('cd /vagrant')
+7- Run the application by using the command (pyton application.py)
+8- Access the application [locally](http://localhost:5000)
 
-## Preparing the project:
-1. Install Vagrant and VirtualBox
-2. Download the project files to Vagrant folder
 
-## Run
+#JSON Endpoints
+you can access the json data of the project through :
 
-From vagrant folder inside the virtual machine, run below:
-```$ python application.py```
+1- to show all catagories JSON file "/category/JSON"
+2- to show view all items in a category "/category/<int:category_id>/item/JSON"
+3- to show a particular item "/category/<int:category_id>/item/<int:item_id>/JSON"
